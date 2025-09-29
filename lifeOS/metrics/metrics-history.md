@@ -4,7 +4,9 @@
 <!-- Each entry contains the metrics relevant to your specific context -->
 
 ## Format Guide
+
 Each weekly entry will follow this structure:
+
 ```markdown
 ### Week of [YYYY-MM-DD]
 - **Metric 1**: [Value]

@@ -49,7 +49,7 @@ Based on context analysis, determine relevant metrics. Examples:
 
 Ask the user for current values of the discovered metrics:
 
-```
+```text
 Based on your [type] work, let's track this week's progress:
 1. [Specific metric 1]:
 2. [Specific metric 2]:
@@ -63,7 +63,7 @@ Based on your [type] work, let's track this week's progress:
 - Update the metrics history with new data
 - Launch metrics-analyst subagent with:
 
-  ```
+  ```text
   Analyze this week's metrics:
   Current: [provide current metrics]
   Previous: [provide last week's metrics]

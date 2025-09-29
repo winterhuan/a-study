@@ -9,7 +9,7 @@ Personalized daily news briefing based on your interests and current relevance.
 Launch interest-analyzer subagent to identify user's interests:
 
 ```text
-Analyze all files in lifeOS/ to identify:
+Analyze all files in / to identify:
 - Current projects and focus areas
 - Technologies and tools being used
 - Topics frequently mentioned
@@ -23,7 +23,7 @@ Return a structured list of interests with priority levels.
 
 Launch news-curator subagent with discovered interests:
 
-```
+```text
 Search for news on these topics: [List of interests]
 
 CRITICAL REQUIREMENTS:
