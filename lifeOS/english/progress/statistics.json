@@ -1,0 +1,53 @@
+{
+  "overall_stats": {
+    "total_words_learned": 0,
+    "total_study_days": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "average_daily_words": 0,
+    "overall_accuracy": 0
+  },
+  "weekly_stats": {
+    "new_words": 0,
+    "reviewed_words": 0,
+    "accuracy_rate": 0,
+    "study_days": 0,
+    "total_study_time_minutes": 0
+  },
+  "monthly_stats": {
+    "new_words": 0,
+    "reviewed_words": 0,
+    "accuracy_rate": 0,
+    "study_days": 0,
+    "total_study_time_minutes": 0
+  },
+  "achievements": {
+    "unlocked": [],
+    "in_progress": [
+      {
+        "name": "First Word",
+        "description": "Learn your first technical term",
+        "progress": 0,
+        "target": 1
+      },
+      {
+        "name": "Week Warrior",
+        "description": "Study for 7 consecutive days",
+        "progress": 0,
+        "target": 7
+      },
+      {
+        "name": "Centurion",
+        "description": "Master 100 technical terms",
+        "progress": 0,
+        "target": 100
+      }
+    ]
+  },
+  "learning_patterns": {
+    "best_time_of_day": null,
+    "most_productive_day": null,
+    "average_session_length": 0,
+    "preferred_learning_mode": null
+  }
+}

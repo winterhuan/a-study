@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Rust
+target/
+Cargo.lock
+
+# Java
+*.class
+*.jar
+target/
+dependency-reduced-pom.xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.secret

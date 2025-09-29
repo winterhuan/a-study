@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "total_words": 0,
+    "last_updated": "",
+    "next_review_date": ""
+  },
+  "words_in_progress": [],
+  "review_schedule": {
+    "day_1": [],
+    "day_3": [],
+    "day_7": [],
+    "day_15": [],
+    "day_30": []
+  },
+  "learning_queue": []
+}

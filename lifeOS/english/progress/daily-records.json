@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "created": "2025-09-29",
+    "last_session": null,
+    "total_sessions": 0
+  },
+  "daily_records": [],
+  "session_template": {
+    "date": "",
+    "session_id": "",
+    "duration_minutes": 0,
+    "new_words": [],
+    "reviewed_words": [],
+    "accuracy": {
+      "correct": 0,
+      "incorrect": 0,
+      "rate": 0
+    },
+    "notes": ""
+  }
+}

@@ -1,0 +1,14 @@
+[workspace]
+members = ["helloLance"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+lance = "0.33.0"
+arrow = "55.2.0"
+arrow-array = "55.2.0"
+futures = "0.3.31"
+tokio = { version = "1.47.1", features = ["full"] }
