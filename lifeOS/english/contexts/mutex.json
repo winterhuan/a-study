@@ -1,0 +1,72 @@
+{
+  "word": "mutex",
+  "definition": "Mutual exclusion lock ensuring only one thread accesses a resource at a time",
+  "domain": "Concurrency",
+  "difficulty": "intermediate",
+  "project_contexts": [
+    {
+      "context": "Concurrency: asynchronous, mutex, semaphore, deadlock",
+      "source": "CLAUDE.md",
+      "explanation": "mutex是并发编程的基础同步原语,与异步编程、信号量和死锁一起构成并发控制的核心知识体系"
+    },
+    {
+      "context": "mutual exclusion using mutex locks | Rust std::sync::Mutex",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "Rust的std::sync::Mutex提供了线程安全的互斥锁实现,确保同一时刻只有一个线程能访问被保护的数据"
+    },
+    {
+      "context": "preventing race conditions with mutex in concurrent systems",
+      "source": "sparkStudy/reading/executor.md",
+      "explanation": "在Spark Executor等并发系统中,使用mutex防止多线程同时修改共享状态导致的竞态条件"
+    }
+  ],
+  "technical_explanation": {
+    "english": "A mutex (mutual exclusion) is a binary synchronization primitive that ensures exclusive access to a shared resource. Only one thread can hold the lock at a time. In Rust, std::sync::Mutex provides thread-safe access with compile-time guarantees, preventing data races. When a thread acquires a mutex, others must wait until it's released.",
+    "chinese": "互斥锁(mutex)是一个二元同步原语,确保对共享资源的独占访问。同一时刻只有一个线程可以持有锁。在Rust中,std::sync::Mutex提供线程安全访问和编译时保证,防止数据竞争。当一个线程获取互斥锁时,其他线程必须等待直到锁被释放。"
+  },
+  "usage_scenarios": [
+    "Protecting shared state in multi-threaded applications",
+    "Ensuring thread-safe access to critical sections in distributed systems",
+    "Guarding mutable data structures in concurrent task execution",
+    "Implementing thread-safe counters and accumulators",
+    "Coordinating access to non-thread-safe external libraries"
+  ],
+  "memory_tips": {
+    "etymology": "mutex = MUTual EXclusion, 互斥的缩写,表示相互排斥的访问控制",
+    "association": "Think of a single-stall bathroom with a lock - only one person can use it at a time. Mutex is the lock.",
+    "related_words": ["semaphore", "lock", "critical section", "race condition", "thread-safe"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "Use a _______ to ensure only one thread can modify the shared counter at a time.",
+      "answer": "mutex",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释为什么需要使用mutex来保护共享变量",
+      "sample_answer": "We need a mutex to protect shared variables because without it, multiple threads could read and write simultaneously, causing race conditions and data corruption.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Write a sentence describing mutex usage in Rust",
+      "sample_answer": "In Rust, std::sync::Mutex<T> wraps data and ensures compile-time thread safety, preventing data races through the ownership system.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈmjuːteks/",
+    "syllables": "MU-tex"
+  },
+  "example_sentences": [
+    "The Rust std::sync::Mutex ensures thread-safe access to the shared counter.",
+    "Always acquire the mutex before modifying shared state to prevent race conditions.",
+    "If a thread panics while holding a mutex, the mutex becomes poisoned in Rust."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

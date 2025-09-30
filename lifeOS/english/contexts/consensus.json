@@ -1,0 +1,72 @@
+{
+  "word": "consensus",
+  "definition": "An agreement protocol among distributed nodes on a single value or system state",
+  "domain": "Distributed Systems",
+  "difficulty": "advanced",
+  "project_contexts": [
+    {
+      "context": "Distributed Systems: executor, checkpoint, partition, consensus",
+      "source": "CLAUDE.md",
+      "explanation": "consensus是分布式系统的核心算法,与executor、checkpoint和partition一起构成分布式系统的基础概念"
+    },
+    {
+      "context": "consensus algorithms in distributed systems | Paxos and Raft consensus",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "Paxos和Raft是最著名的共识算法,用于在分布式节点之间达成一致性决策,是构建可靠分布式系统的基础"
+    },
+    {
+      "context": "building checkpoint coordination on consensus in distributed stream processing",
+      "source": "flinkStudy/docs/flink_source_code_analysis.md",
+      "explanation": "在Flink等流处理系统中,checkpoint协调机制需要共识算法来确保所有节点对系统状态达成一致,实现容错恢复"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Consensus is a fundamental problem in distributed systems where multiple nodes must agree on a single value or decision despite failures. Famous algorithms include Paxos, Raft, and ZAB (ZooKeeper Atomic Broadcast). Consensus ensures consistency, fault tolerance, and coordination in distributed databases, configuration management, and leader election. It solves challenges like network partitions, node crashes, and message delays.",
+    "chinese": "共识是分布式系统中的基本问题,多个节点必须在存在故障的情况下就单个值或决策达成一致。著名算法包括Paxos、Raft和ZAB(ZooKeeper原子广播)。共识确保分布式数据库、配置管理和领导者选举中的一致性、容错和协调。它解决了网络分区、节点崩溃和消息延迟等挑战。"
+  },
+  "usage_scenarios": [
+    "Implementing leader election in distributed coordination services (ZooKeeper, etcd)",
+    "Ensuring data consistency across replicated database nodes",
+    "Coordinating checkpoint operations in distributed stream processing (Flink)",
+    "Building fault-tolerant configuration management systems",
+    "Achieving agreement on transaction commits in distributed databases"
+  ],
+  "memory_tips": {
+    "etymology": "consensus = con(共同) + sensus(感觉/意见), 源自拉丁语,意为'共同的意见'",
+    "association": "Think of a jury reaching a unanimous verdict - all members must agree (consensus) despite having different perspectives.",
+    "related_words": ["coordination", "replication", "quorum", "leader election", "fault tolerance"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "ZooKeeper uses the ZAB _______ algorithm to ensure all nodes agree on the order of operations.",
+      "answer": "consensus",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释为什么分布式系统需要共识算法",
+      "sample_answer": "Distributed systems need consensus algorithms because nodes must agree on critical decisions (like which node is the leader or what data to store) despite network failures, delays, and node crashes. Without consensus, the system could enter inconsistent states.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Compare Paxos and Raft consensus algorithms",
+      "sample_answer": "Both Paxos and Raft solve distributed consensus, but Raft is designed to be more understandable. Raft explicitly separates leader election, log replication, and safety, making it easier to implement and reason about than Paxos's more abstract approach.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/kənˈsensəs/",
+    "syllables": "con-SEN-sus"
+  },
+  "example_sentences": [
+    "Raft consensus algorithm ensures all nodes in the cluster agree on the current leader.",
+    "ZooKeeper uses ZAB consensus to maintain consistency across distributed replicas.",
+    "Achieving consensus in distributed systems is challenging due to network partitions and node failures."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

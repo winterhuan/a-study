@@ -1,0 +1,72 @@
+{
+  "word": "deadlock",
+  "definition": "A state where processes wait indefinitely for each other's resources, causing system freeze",
+  "domain": "Concurrency",
+  "difficulty": "intermediate",
+  "project_contexts": [
+    {
+      "context": "Concurrency: asynchronous, mutex, semaphore, deadlock",
+      "source": "CLAUDE.md",
+      "explanation": "deadlock是并发编程中的关键问题,当多个线程互相等待对方持有的资源时会发生死锁,导致系统停滞"
+    },
+    {
+      "context": "preventing deadlock in concurrent systems | deadlock detection algorithms",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "在设计并发系统时必须考虑死锁预防,通过资源排序、超时机制或死锁检测算法来避免或解决死锁"
+    },
+    {
+      "context": "avoiding deadlock in distributed task scheduling and resource allocation",
+      "source": "flinkStudy/docs/flink_source_code_analysis.md",
+      "explanation": "在Flink等分布式系统的任务调度中,必须谨慎设计资源分配策略以避免多个任务互相等待资源导致死锁"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Deadlock occurs when two or more processes wait indefinitely for resources held by each other, creating a circular dependency. The four necessary conditions are: mutual exclusion, hold and wait, no preemption, and circular wait. In distributed systems like Flink and Spark, deadlock can occur in resource allocation, task scheduling, or network communication. Prevention strategies include resource ordering, timeout mechanisms, and deadlock detection algorithms.",
+    "chinese": "死锁发生在两个或多个进程无限期地等待对方持有的资源,形成循环依赖。四个必要条件是:互斥、持有并等待、不可抢占和循环等待。在Flink和Spark等分布式系统中,死锁可能发生在资源分配、任务调度或网络通信中。预防策略包括资源排序、超时机制和死锁检测算法。"
+  },
+  "usage_scenarios": [
+    "Analyzing resource allocation issues in distributed task schedulers",
+    "Debugging multi-threaded applications with complex locking patterns",
+    "Designing lock-free or lock-order strategies to prevent deadlock",
+    "Implementing timeout mechanisms in database transaction systems",
+    "Detecting circular dependencies in distributed coordination systems"
+  ],
+  "memory_tips": {
+    "etymology": "deadlock = dead(死) + lock(锁), 形象地描述系统被锁死无法继续的状态",
+    "association": "Think of two cars at a narrow bridge, each waiting for the other to back up - neither can proceed. That's deadlock.",
+    "related_words": ["mutex", "race condition", "livelock", "starvation", "circular wait"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "A _______ occurs when two threads wait indefinitely for resources held by each other.",
+      "answer": "deadlock",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释死锁的四个必要条件",
+      "sample_answer": "The four necessary conditions for deadlock are: mutual exclusion (resources cannot be shared), hold and wait (processes hold resources while waiting for others), no preemption (resources cannot be forcibly taken), and circular wait (circular chain of waiting processes).",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Describe a strategy to prevent deadlock in distributed systems",
+      "sample_answer": "One strategy is to establish a global ordering of resources and require all processes to acquire locks in that order, breaking the circular wait condition and preventing deadlock.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈdedlɒk/",
+    "syllables": "DEAD-lock"
+  },
+  "example_sentences": [
+    "The system experienced a deadlock when two threads tried to acquire locks in opposite orders.",
+    "Flink's scheduler implements deadlock prevention through careful resource allocation strategies.",
+    "We detected a deadlock in the database transaction system using timeout mechanisms."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

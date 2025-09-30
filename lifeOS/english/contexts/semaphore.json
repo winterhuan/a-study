@@ -1,0 +1,72 @@
+{
+  "word": "semaphore",
+  "definition": "A synchronization primitive that controls access to shared resources through counters",
+  "domain": "Concurrency",
+  "difficulty": "intermediate",
+  "project_contexts": [
+    {
+      "context": "Concurrency: asynchronous, mutex, semaphore, deadlock",
+      "source": "CLAUDE.md",
+      "explanation": "在并发编程中,semaphore是控制多个线程访问有限资源的同步机制,与mutex和deadlock一起构成并发控制的核心概念"
+    },
+    {
+      "context": "counting semaphores in concurrent programming",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "计数信号量(counting semaphore)允许多个线程同时访问资源,直到达到设定的计数上限,这是与二元互斥锁的关键区别"
+    },
+    {
+      "context": "using semaphore for resource limits in distributed systems",
+      "source": "CLAUDE.md",
+      "explanation": "在分布式系统中,semaphore常用于限制并发连接数、线程池大小等资源访问,防止资源耗尽"
+    }
+  ],
+  "technical_explanation": {
+    "english": "A semaphore is a synchronization primitive that maintains a counter to control access to shared resources. Unlike a mutex (which is binary), a semaphore allows multiple threads to access the resource simultaneously up to a specified limit. In Rust, tokio::sync::Semaphore provides async-aware resource limiting for concurrent operations.",
+    "chinese": "信号量是一个维护计数器的同步原语,用于控制对共享资源的访问。与互斥锁(二元)不同,信号量允许多个线程同时访问资源,直到达到指定限制。在Rust中,tokio::sync::Semaphore提供了用于并发操作的异步感知资源限制功能。"
+  },
+  "usage_scenarios": [
+    "Limiting concurrent database connections to prevent overload",
+    "Controlling thread pool size in distributed task execution",
+    "Managing rate limits for API requests in concurrent applications",
+    "Implementing bounded resource pools in microservices",
+    "Coordinating access to limited hardware resources (GPUs, network bandwidth)"
+  ],
+  "memory_tips": {
+    "etymology": "semaphore = sema(信号) + phore(携带者), 源自希腊语,原指铁路信号系统",
+    "association": "Think of a parking lot with N spaces - semaphore is the counter tracking available spots. When full, cars must wait.",
+    "related_words": ["mutex", "lock", "synchronization", "resource pool", "concurrent"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "A _______ can control access for multiple threads, while a mutex allows only one.",
+      "answer": "semaphore",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释信号量和互斥锁的主要区别",
+      "sample_answer": "A semaphore allows multiple threads (up to N) to access resources simultaneously using a counter, while a mutex only permits one thread at a time, acting as a binary lock.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Write a sentence describing when to use a semaphore in a distributed system",
+      "sample_answer": "Use a semaphore to limit concurrent database connections to 10, preventing connection pool exhaustion in high-traffic scenarios.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈseməfɔː(r)/",
+    "syllables": "SEM-a-phore"
+  },
+  "example_sentences": [
+    "We use a semaphore to limit concurrent API calls to 100 requests per second.",
+    "The tokio::sync::Semaphore ensures only 5 threads can process files simultaneously.",
+    "Semaphore-based rate limiting prevents overwhelming downstream services."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

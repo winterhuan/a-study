@@ -1,10 +1,56 @@
 {
   "metadata": {
     "created": "2025-09-29",
-    "last_session": null,
-    "total_sessions": 0
+    "last_session": "2025-09-30",
+    "total_sessions": 1,
+    "total_words_learned": 10,
+    "total_time_minutes": 45,
+    "current_streak": 1
   },
-  "daily_records": [],
+  "daily_records": [
+    {
+      "date": "2025-09-30",
+      "session_id": "2025-09-30-daily",
+      "duration_minutes": 45,
+      "new_words": [
+        "semaphore",
+        "mutex",
+        "deadlock",
+        "throughput",
+        "idempotent",
+        "consensus",
+        "middleware",
+        "sharding",
+        "compaction",
+        "embedding"
+      ],
+      "reviewed_words": [],
+      "domains_covered": [
+        "Concurrency",
+        "Stream Processing",
+        "Architecture",
+        "Distributed Systems",
+        "Database",
+        "Machine Learning"
+      ],
+      "difficulty_breakdown": {
+        "intermediate": 6,
+        "advanced": 4
+      },
+      "mastery_progress": {
+        "recognition": 10,
+        "understanding": 0,
+        "application": 0,
+        "mastery": 0
+      },
+      "accuracy": {
+        "correct": 0,
+        "incorrect": 0,
+        "rate": 0
+      },
+      "notes": "First day of learning! Focused on low-frequency advanced terms from concurrent programming, distributed systems, and ML. Priority words: semaphore, mutex, deadlock (concurrency trio)."
+    }
+  ],
   "session_template": {
     "date": "",
     "session_id": "",

@@ -1,18 +1,978 @@
 {
-  "metadata": {
-    "total_words": 0,
-    "last_updated": "",
-    "sources": []
-  },
-  "vocabulary": [],
-  "categories": {
-    "distributed_systems": [],
-    "stream_processing": [],
-    "concurrency": [],
-    "architecture": [],
-    "database": [],
-    "cloud_computing": [],
-    "networking": [],
-    "algorithms": []
+  "words": [
+    {
+      "word": "asynchronous",
+      "definition": "Operations that don't block execution while waiting for completion",
+      "domain": "Concurrency",
+      "frequency": 8,
+      "sources": [
+        "lanceStudy/src/main.rs",
+        "flinkStudy/docs/flink_source_code_analysis.md",
+        "sparkStudy/reading/executor.md"
+      ],
+      "example": "异步连接到 Driver 并注册 Executor | #[tokio::main] async fn main()",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "checkpoint",
+      "definition": "A saved snapshot of distributed system state for fault recovery",
+      "domain": "Distributed Systems",
+      "frequency": 15,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md",
+        "CLAUDE.md"
+      ],
+      "example": "Checkpoint 是 Flink 实现容错机制的核心功能 | CheckpointCoordinator 定时触发 Checkpoint",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "executor",
+      "definition": "A worker process that executes tasks in distributed computing",
+      "domain": "Distributed Systems",
+      "frequency": 22,
+      "sources": [
+        "sparkStudy/reading/executor.md",
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "CoarseGrainedExecutorBackend 是 Spark 的标准 Executor 后端实现 | TaskExecutor 接收并执行分配的任务",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "streaming",
+      "definition": "Processing data continuously as it arrives rather than in batches",
+      "domain": "Stream Processing",
+      "frequency": 18,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md",
+        "flinkStudy/src/main/java/org/apache/flink/demo/SocketStreamWordCount.java"
+      ],
+      "example": "StreamExecutionEnvironment - 流处理执行环境 | Implements a streaming version of WordCount",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "watermark",
+      "definition": "A timestamp indicating progress in event time for handling late data",
+      "domain": "Stream Processing",
+      "frequency": 6,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Stream Processing: watermark, windowing, backpressure, throughput",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "windowing",
+      "definition": "Grouping stream elements into finite sets based on time or count",
+      "domain": "Stream Processing",
+      "frequency": 7,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "TumblingProcessingTimeWindows.of(Duration.ofSeconds(5)) | window it, and aggregate the counts",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "orchestration",
+      "definition": "Automated coordination and management of complex distributed systems",
+      "domain": "Architecture",
+      "frequency": 4,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Architecture: orchestration, scalability, resilience, idempotent",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "resilience",
+      "definition": "Ability to recover quickly from failures and continue operating",
+      "domain": "Architecture",
+      "frequency": 4,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "fault tolerance and resilience patterns in distributed systems",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "scalability",
+      "definition": "Capacity to handle growing workload by adding resources",
+      "domain": "Architecture",
+      "frequency": 3,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "horizontal scalability in distributed systems",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "parallelism",
+      "definition": "Executing multiple operations simultaneously to improve performance",
+      "domain": "Concurrency",
+      "frequency": 5,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "windowCounts.print().setParallelism(1) | data parallelism in stream processing",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "serialization",
+      "definition": "Converting data structures into a format for storage or transmission",
+      "domain": "Data Structures",
+      "frequency": 9,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "将一个 Schema 对象序列化成 JSON 字符串 | serde 用于序列化和反序列化",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "deserialization",
+      "definition": "Reconstructing data structures from serialized format",
+      "domain": "Data Structures",
+      "frequency": 7,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "将 JSON 字符串反序列化回 Schema 对象 | Deserialize trait from serde",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "columnar",
+      "definition": "Data storage format organizing by columns rather than rows",
+      "domain": "Data Structures",
+      "frequency": 4,
+      "sources": [
+        "CLAUDE.md",
+        "lanceStudy/src/main.rs"
+      ],
+      "example": "Lance columnar database examples | Arrow columnar data structures",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "schema",
+      "definition": "Structure defining data types and organization in a dataset",
+      "domain": "Data Structures",
+      "frequency": 12,
+      "sources": [
+        "lanceStudy/src/main.rs",
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "let schema = Arc::new(Schema::new(vec![ | Apache Arrow Schema 对象与 JSON 格式转换",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "backend",
+      "definition": "Server-side or underlying implementation of a system component",
+      "domain": "Architecture",
+      "frequency": 9,
+      "sources": [
+        "sparkStudy/reading/executor.md",
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "CoarseGrainedExecutorBackend 是 Spark 的标准 Executor 后端实现 | HashMapStateBackend - 内存状态后端",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "tokenizer",
+      "definition": "Component that splits text into meaningful units (tokens)",
+      "domain": "Data Processing",
+      "frequency": 6,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": ".flatMap(new Tokenizer()) | Implements the string tokenizer that splits sentences into words",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "partition",
+      "definition": "Dividing data into separate segments for parallel processing",
+      "domain": "Distributed Systems",
+      "frequency": 11,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md",
+        "CLAUDE.md"
+      ],
+      "example": "ResultPartition - 结果分区 | kafka partition mechanism",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "aggregation",
+      "definition": "Combining multiple values into a summary result",
+      "domain": "Data Processing",
+      "frequency": 5,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "window it, and aggregate the counts | .sum(1) aggregation operation",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "throughput",
+      "definition": "Amount of data processed in a given time period",
+      "domain": "Stream Processing",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Stream Processing: watermark, windowing, backpressure, throughput",
+      "difficulty": "intermediate",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "backpressure",
+      "definition": "Flow control mechanism to prevent system overload in streaming",
+      "domain": "Stream Processing",
+      "frequency": 3,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "handling backpressure in streaming systems | reactive streams backpressure",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "coordinator",
+      "definition": "Component managing and synchronizing distributed operations",
+      "domain": "Distributed Systems",
+      "frequency": 4,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "CheckpointCoordinator - Checkpoint 协调器 | 负责触发和协调整个作业的 Checkpoint 过程",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "idempotent",
+      "definition": "Operation that produces same result when executed multiple times",
+      "domain": "Architecture",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "designing idempotent APIs and functions | idempotent message processing",
+      "difficulty": "advanced",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "consensus",
+      "definition": "Agreement protocol among distributed nodes on a single value",
+      "domain": "Distributed Systems",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "consensus algorithms in distributed systems | Paxos and Raft consensus",
+      "difficulty": "advanced",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "semaphore",
+      "definition": "Synchronization primitive controlling access to shared resources",
+      "domain": "Concurrency",
+      "frequency": 1,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "counting semaphores in concurrent programming | using semaphore for resource limits",
+      "difficulty": "intermediate",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "mutex",
+      "definition": "Mutual exclusion lock ensuring only one thread accesses resource",
+      "domain": "Concurrency",
+      "frequency": 1,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "mutual exclusion using mutex locks | Rust std::sync::Mutex",
+      "difficulty": "intermediate",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "deadlock",
+      "definition": "State where processes wait indefinitely for each other's resources",
+      "domain": "Concurrency",
+      "frequency": 1,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "preventing deadlock in concurrent systems | deadlock detection algorithms",
+      "difficulty": "intermediate",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "dispatcher",
+      "definition": "Component routing requests to appropriate handlers or workers",
+      "domain": "Architecture",
+      "frequency": 5,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "Dispatcher - 作业分发器 | submitJob() 方法分发作业到集群",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "scheduler",
+      "definition": "Component deciding when and where to execute tasks",
+      "domain": "Distributed Systems",
+      "frequency": 6,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "DefaultScheduler - 默认调度器 | startScheduling() 方法启动任务调度",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "transformation",
+      "definition": "Operation converting input data to output in a processing pipeline",
+      "domain": "Data Processing",
+      "frequency": 8,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "所有转换操作被表示为 Transformation 对象 | 数据转换的抽象表示",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "entrypoint",
+      "definition": "Initial execution point where a program or service starts",
+      "domain": "Architecture",
+      "frequency": 3,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "ClusterEntrypoint - 集群入口点 | startClusterComponents() 方法",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "snapshot",
+      "definition": "Capturing system state at a specific point in time",
+      "domain": "Distributed Systems",
+      "frequency": 7,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "Checkpoint 定期对整个作业的状态进行快照 | 通过 CheckpointableKeyedStateBackend 进行状态快照",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "delegation",
+      "definition": "Passing responsibility from one component to another",
+      "domain": "Architecture",
+      "frequency": 4,
+      "sources": [
+        "sparkStudy/reading/classLoader.md"
+      ],
+      "example": "双亲委派模型（Parent Delegation Model） | 类加载器首先委托给父类加载器尝试加载",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "trait",
+      "definition": "Interface defining behavior that types can implement (Rust concept)",
+      "domain": "Programming Languages",
+      "frequency": 15,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "TryFrom trait 用于定义可能失败的转换 | impl Trait for Type 标准语法",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "enum",
+      "definition": "Type with a fixed set of variants, each potentially holding data",
+      "domain": "Programming Languages",
+      "frequency": 8,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "DataType 是一个枚举 | Result<T, E> 要么是 Ok(T)，要么是 Err(E)",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "borrow",
+      "definition": "Temporary access to data without taking ownership (Rust concept)",
+      "domain": "Programming Languages",
+      "frequency": 12,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "dt: &DataType 参数是一个对 DataType 的借用 | 避免了不必要的数据复制",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "closure",
+      "definition": "Anonymous function that can capture variables from its environment",
+      "domain": "Programming Languages",
+      "frequency": 6,
+      "sources": [
+        "lanceStudy/docs/arrowJson.md"
+      ],
+      "example": "ok_or_else(|| Error::Arrow { ... }) | 闭包捕获外部变量",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "downcast",
+      "definition": "Converting from general type to more specific type",
+      "domain": "Programming Languages",
+      "frequency": 3,
+      "sources": [
+        "lanceStudy/src/main.rs"
+      ],
+      "example": "batch.column(0).as_any().downcast_ref::<Int32Array>() | type casting",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "iterator",
+      "definition": "Object enabling sequential traversal through collection elements",
+      "domain": "Data Structures",
+      "frequency": 7,
+      "sources": [
+        "lanceStudy/src/main.rs"
+      ],
+      "example": "RecordBatchIterator::new(batches.into_iter().map(Ok), schema) | futures stream iteration",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "middleware",
+      "definition": "Software layer between application and underlying services",
+      "domain": "Architecture",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "message middleware like Kafka | request-response middleware chain",
+      "difficulty": "intermediate",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "replication",
+      "definition": "Copying data across multiple nodes for redundancy and availability",
+      "domain": "Distributed Systems",
+      "frequency": 3,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Distributed Systems: consensus, replication, sharding | data replication strategies",
+      "difficulty": "advanced",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "sharding",
+      "definition": "Horizontally partitioning data across multiple database instances",
+      "domain": "Distributed Systems",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Distributed Systems: replication, sharding | database sharding strategies",
+      "difficulty": "advanced",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "tuple",
+      "definition": "Fixed-size ordered collection of elements of possibly different types",
+      "domain": "Data Structures",
+      "frequency": 8,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "Tuple2<String, Integer> | multiple pairs in the form of (word,1)",
+      "difficulty": "basic",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "collector",
+      "definition": "Interface for emitting results in stream processing frameworks",
+      "domain": "Stream Processing",
+      "frequency": 4,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "Collector<Tuple2<String, Integer>> out | out.collect(new Tuple2<>(token, 1))",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "normalize",
+      "definition": "Converting data to standard or consistent format",
+      "domain": "Data Processing",
+      "frequency": 3,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "normalize and split the line | value.toLowerCase()",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "emit",
+      "definition": "Sending or outputting data in a stream processing context",
+      "domain": "Stream Processing",
+      "frequency": 3,
+      "sources": [
+        "flinkStudy/src/main/java/org/apache/flink/demo/WindowWordCount.java"
+      ],
+      "example": "emit the pairs | emitting records downstream",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "latency",
+      "definition": "Time delay between input and corresponding output",
+      "domain": "Performance",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "low latency stream processing | measuring end-to-end latency",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "durability",
+      "definition": "Guarantee that committed data persists even after system failure",
+      "domain": "Distributed Systems",
+      "frequency": 2,
+      "sources": [
+        "kafkaStudy/problem.md"
+      ],
+      "example": "Kafka 的消息确认机制保证durability | ACID durability property",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "acknowledgment",
+      "definition": "Confirmation signal that data has been successfully received",
+      "domain": "Distributed Systems",
+      "frequency": 3,
+      "sources": [
+        "kafkaStudy/problem.md"
+      ],
+      "example": "Kafka 的消息确认机制 | producer acknowledgment settings",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "inference",
+      "definition": "Process of running trained model to make predictions on new data",
+      "domain": "Machine Learning",
+      "frequency": 4,
+      "sources": [
+        "agnoStudy/README.md"
+      ],
+      "example": "推理模型 deepseek-r1:free | model inference optimization",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "agent",
+      "definition": "Autonomous software entity performing tasks on behalf of users",
+      "domain": "AI/ML",
+      "frequency": 11,
+      "sources": [
+        "agnoStudy/simple_example.py",
+        "agnoStudy/advanced_example.py"
+      ],
+      "example": "Agent(model=OpenRouter(...)) | AI agent framework",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "prompt",
+      "definition": "Input text instructing language model to generate specific output",
+      "domain": "AI/ML",
+      "frequency": 9,
+      "sources": [
+        "agnoStudy/advanced_example.py"
+      ],
+      "example": "creative_prompts = [...] | prompt engineering techniques",
+      "difficulty": "basic",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "embedding",
+      "definition": "Dense vector representation of data in continuous space",
+      "domain": "Machine Learning",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "text embeddings for semantic search | word embedding models",
+      "difficulty": "advanced",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "instantiation",
+      "definition": "Creating a concrete instance of a class or template",
+      "domain": "Programming Concepts",
+      "frequency": 3,
+      "sources": [
+        "agnoStudy/advanced_example.py"
+      ],
+      "example": "def __init__(self): 初始化演示类 | object instantiation",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "deprecation",
+      "definition": "Marking feature as obsolete but still supported temporarily",
+      "domain": "Software Engineering",
+      "frequency": 1,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "API deprecation warning | deprecated method annotations",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "viewport",
+      "definition": "Visible area of content in a display or rendering context",
+      "domain": "UI/Frontend",
+      "frequency": 1,
+      "sources": [
+        "agnoStudy/advanced_example.py"
+      ],
+      "example": "responsive viewport design | viewport meta tag",
+      "difficulty": "basic",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "workspace",
+      "definition": "Collection of related projects managed together",
+      "domain": "Build Systems",
+      "frequency": 5,
+      "sources": [
+        "Cargo.toml"
+      ],
+      "example": "[workspace] members = [\"helloLance\"] | Cargo workspace configuration",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "resolver",
+      "definition": "Component determining versions and dependencies in build system",
+      "domain": "Build Systems",
+      "frequency": 2,
+      "sources": [
+        "Cargo.toml"
+      ],
+      "example": "resolver = \"2\" | dependency resolver algorithm",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "registry",
+      "definition": "Central repository storing and distributing software packages",
+      "domain": "Package Management",
+      "frequency": 3,
+      "sources": [
+        "README.md"
+      ],
+      "example": "cargo search --registry crates-io | npm registry",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "indexing",
+      "definition": "Creating data structure for fast lookup and retrieval",
+      "domain": "Data Structures",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Database进阶术语: columnar, compaction, indexing | database index optimization",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "compaction",
+      "definition": "Process of consolidating and optimizing stored data",
+      "domain": "Database",
+      "frequency": 1,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "Database: columnar, compaction, indexing | log-structured merge compaction",
+      "difficulty": "advanced",
+      "mastery_level": "recognition",
+      "last_reviewed": "2025-09-30",
+      "next_review": "2025-10-01",
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "daemon",
+      "definition": "Background process running continuously without user interaction",
+      "domain": "Operating Systems",
+      "frequency": 1,
+      "sources": [
+        "sparkStudy/reading/executor.md"
+      ],
+      "example": "executor daemon process | system daemon services",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "stateful",
+      "definition": "Maintaining information about previous operations or interactions",
+      "domain": "Stream Processing",
+      "frequency": 3,
+      "sources": [
+        "flinkStudy/docs/flink_source_code_analysis.md"
+      ],
+      "example": "stateful stream processing operators | managing stateful computations",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    },
+    {
+      "word": "stateless",
+      "definition": "Not retaining information between operations or requests",
+      "domain": "Architecture",
+      "frequency": 2,
+      "sources": [
+        "CLAUDE.md"
+      ],
+      "example": "stateless HTTP requests | stateless microservices design",
+      "difficulty": "intermediate",
+      "mastery_level": "not_started",
+      "last_reviewed": null,
+      "next_review": null,
+      "added_date": "2025-09-30"
+    }
+  ],
+  "total_words": 63,
+  "last_updated": "2025-09-30",
+  "domains": {
+    "Distributed Systems": 12,
+    "Stream Processing": 11,
+    "Concurrency": 5,
+    "Architecture": 9,
+    "Data Structures": 7,
+    "Data Processing": 5,
+    "Programming Languages": 5,
+    "AI/ML": 3,
+    "Build Systems": 3,
+    "Database": 2,
+    "Machine Learning": 2,
+    "Performance": 1,
+    "Software Engineering": 1,
+    "Package Management": 1,
+    "Operating Systems": 1
   }
 }

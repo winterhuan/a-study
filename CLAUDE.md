@@ -311,11 +311,12 @@ The `/english-learning` command provides an intelligent vocabulary learning syst
 
 - **Commands**: `.claude/commands/english-learning.md`
 - **Subagents**:
-    - `.claude/subagents/vocabulary-extractor.md` - Intelligent word extraction
-    - `.claude/subagents/context-generator.md` - Context and practice generation
-    - `.claude/subagents/progress-analyzer.md` - Visual progress reports
+    - `.claude/subagents/en-vocabulary-extractor.md` - Intelligent word extraction
+    - `.claude/subagents/en-context-generator.md` - Context and practice generation
+    - `.claude/subagents/en-progress-analyzer.md` - Visual progress reports
 - **Learning Data**:
     - `lifeOS/english/vocabulary/` - Word lists and mastery tracking
     - `lifeOS/english/contexts/` - Generated learning contexts
-    - `lifeOS/english/progress/` - Statistics and achievements
-    - `lifeOS/english/reports/` - Weekly learning reports
+    - `lifeOS/english/daily/` - Daily learning records
+    - `lifeOS/english/progress/` - Statistics, achievements and progress reports
+    - `lifeOS/english/reports/` - Vocabulary scan reports

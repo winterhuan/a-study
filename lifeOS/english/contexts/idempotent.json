@@ -1,0 +1,72 @@
+{
+  "word": "idempotent",
+  "definition": "An operation that produces the same result when executed multiple times with the same input",
+  "domain": "Architecture",
+  "difficulty": "advanced",
+  "project_contexts": [
+    {
+      "context": "Architecture: orchestration, scalability, resilience, idempotent",
+      "source": "CLAUDE.md",
+      "explanation": "idempotent是架构设计的核心原则之一,与编排、可扩展性和弹性一起构成分布式系统的关键属性"
+    },
+    {
+      "context": "designing idempotent APIs and functions | idempotent message processing",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "设计幂等API和函数是分布式系统的最佳实践,确保重复请求不会产生副作用,这对于消息处理和容错至关重要"
+    },
+    {
+      "context": "ensuring idempotent operations for fault tolerance in distributed systems",
+      "source": "flinkStudy/docs/flink_source_code_analysis.md",
+      "explanation": "在Flink等流处理系统中,幂等操作是实现精确一次语义(exactly-once)的关键,允许系统从失败中恢复而不产生重复结果"
+    }
+  ],
+  "technical_explanation": {
+    "english": "An idempotent operation guarantees the same result regardless of how many times it's executed with identical inputs. In distributed systems, idempotency is crucial for fault tolerance and exactly-once semantics. For example, 'SET x = 5' is idempotent (executing it twice still sets x to 5), while 'ADD x += 5' is not (executing twice adds 10). Idempotent operations enable safe retries without side effects.",
+    "chinese": "幂等操作保证无论执行多少次,只要输入相同,结果就相同。在分布式系统中,幂等性对于容错和精确一次语义至关重要。例如,'SET x = 5'是幂等的(执行两次x仍为5),而'ADD x += 5'不是(执行两次会加10)。幂等操作使得安全重试成为可能,不会产生副作用。"
+  },
+  "usage_scenarios": [
+    "Designing RESTful APIs where PUT/DELETE operations should be idempotent",
+    "Implementing retry logic in distributed message processing systems",
+    "Ensuring exactly-once semantics in stream processing pipelines",
+    "Building fault-tolerant microservices that handle duplicate requests gracefully",
+    "Creating database operations that can be safely retried after failures"
+  ],
+  "memory_tips": {
+    "etymology": "idempotent = idem(相同,拉丁语) + potent(有效力的), 意思是'相同的效力'",
+    "association": "Think of a light switch already in ON position - pressing it again (idempotent) keeps it ON, unlike a toggle (not idempotent).",
+    "related_words": ["stateless", "deterministic", "pure function", "side-effect-free", "retry-safe"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "An _______ operation produces the same result no matter how many times it's executed.",
+      "answer": "idempotent",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释为什么幂等性对分布式系统很重要",
+      "sample_answer": "Idempotency is crucial for distributed systems because it enables safe retries when network failures occur. If an operation is idempotent, we can retry it without worrying about duplicate side effects or data corruption.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Give an example of an idempotent vs non-idempotent operation",
+      "sample_answer": "Setting a user's email (PUT /users/123 {email: 'x@y.com'}) is idempotent - executing it twice produces the same result. However, incrementing a counter (POST /counter/increment) is not idempotent - each execution changes the result.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˌaɪdɪmˈpəʊtənt/",
+    "syllables": "i-dem-PO-tent"
+  },
+  "example_sentences": [
+    "Design your REST APIs to be idempotent so clients can safely retry failed requests.",
+    "Flink's exactly-once semantics rely on idempotent sinks that handle duplicate writes gracefully.",
+    "An idempotent operation like 'SET x = 5' can be retried without causing unintended side effects."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

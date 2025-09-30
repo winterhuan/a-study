@@ -1,0 +1,72 @@
+{
+  "word": "compaction",
+  "definition": "Process of consolidating and optimizing stored data by removing redundancies and reclaiming space",
+  "domain": "Database",
+  "difficulty": "advanced",
+  "project_contexts": [
+    {
+      "context": "Database: columnar, compaction, indexing | log-structured merge compaction",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "compaction是数据库优化的关键过程,与columnar存储和indexing一起提高数据库性能,特别是在LSM树等日志结构存储中"
+    },
+    {
+      "context": "columnar, compaction, embedding in Lance database design",
+      "source": "CLAUDE.md",
+      "explanation": "在Lance等列式数据库中,compaction用于合并小文件、删除过时数据和优化存储布局,与列式存储和embedding向量存储协同工作"
+    },
+    {
+      "context": "major and minor compaction strategies in LSM-tree databases",
+      "source": "lanceStudy/docs/lance.md",
+      "explanation": "LSM树数据库(如RocksDB、Cassandra)使用major compaction(合并所有层)和minor compaction(合并相邻层)来平衡写入性能和读取效率"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Compaction is a background process in databases that consolidates data files, removes deleted records, merges sorted runs, and optimizes storage layout. In LSM-tree databases (RocksDB, Cassandra, HBase), compaction merges multiple SSTables to reduce read amplification and reclaim space. In columnar databases like Lance, compaction reorganizes data for better compression and query performance. Types include minor compaction (merging adjacent levels) and major compaction (full reorganization).",
+    "chinese": "压缩是数据库中的后台进程,用于合并数据文件、删除已删除记录、合并排序运行并优化存储布局。在LSM树数据库(RocksDB、Cassandra、HBase)中,压缩合并多个SSTable以减少读放大并回收空间。在Lance等列式数据库中,压缩重新组织数据以获得更好的压缩率和查询性能。类型包括minor compaction(合并相邻层)和major compaction(完全重组)。"
+  },
+  "usage_scenarios": [
+    "Optimizing LSM-tree databases like RocksDB by merging SSTables",
+    "Reclaiming storage space from deleted or updated records in Cassandra",
+    "Improving query performance in columnar databases through better data layout",
+    "Reducing read amplification by consolidating sorted runs in key-value stores",
+    "Managing storage efficiency in time-series databases with data retention policies"
+  ],
+  "memory_tips": {
+    "etymology": "compaction = compact(紧凑) + ion, 使数据变得紧凑、压缩的过程",
+    "association": "Think of compacting trash - you squeeze out air and consolidate garbage into smaller, denser space. Database compaction does the same with data files.",
+    "related_words": ["LSM-tree", "SSTable", "merge", "garbage collection", "defragmentation"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "RocksDB performs _______ to merge multiple SSTables and reduce read amplification.",
+      "answer": "compaction",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释为什么LSM树数据库需要compaction",
+      "sample_answer": "LSM-tree databases need compaction because they write data to immutable files (SSTables) without updating in place. Over time, this creates many overlapping files with duplicate or deleted records. Compaction merges these files, removes obsolete data, and reduces read amplification.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Compare minor compaction and major compaction",
+      "sample_answer": "Minor compaction merges SSTables from adjacent LSM-tree levels incrementally, running frequently with low impact. Major compaction reorganizes all data across all levels, providing maximum optimization but consuming more resources and running less frequently.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/kəmˈpækʃn/",
+    "syllables": "com-PAC-tion"
+  },
+  "example_sentences": [
+    "Cassandra automatically triggers compaction to merge SSTables and reclaim disk space.",
+    "Tuning compaction strategies in RocksDB is crucial for balancing write and read performance.",
+    "Major compaction can temporarily increase I/O load but significantly improves query speed."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

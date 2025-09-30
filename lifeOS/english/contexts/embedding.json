@@ -1,0 +1,72 @@
+{
+  "word": "embedding",
+  "definition": "Dense vector representation of data in continuous space, capturing semantic relationships",
+  "domain": "Machine Learning",
+  "difficulty": "advanced",
+  "project_contexts": [
+    {
+      "context": "text embeddings for semantic search | word embedding models",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "文本嵌入将词语或句子转换为向量表示,使得语义相似的文本在向量空间中距离更近,是语义搜索和NLP的基础"
+    },
+    {
+      "context": "AI/ML: agent, prompt, inference, embedding",
+      "source": "CLAUDE.md",
+      "explanation": "embedding是机器学习的核心技术,与agent、prompt和inference一起构成现代AI应用的技术栈"
+    },
+    {
+      "context": "storing and querying embeddings in Lance vector database",
+      "source": "lanceStudy/docs/lance.md",
+      "explanation": "Lance作为向量数据库,专门用于高效存储和检索embedding向量,支持相似度搜索和推荐系统等应用"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Embeddings are dense vector representations that map discrete objects (words, images, users) into continuous vector space, where semantic similarity is reflected by vector proximity. Word embeddings (Word2Vec, GloVe) capture linguistic relationships, while transformer models (BERT, GPT) generate contextual embeddings. In vector databases like Lance, embeddings enable semantic search through similarity metrics (cosine, Euclidean). Applications include recommendation systems, semantic search, and similarity matching.",
+    "chinese": "嵌入是将离散对象(词语、图像、用户)映射到连续向量空间的密集向量表示,其中语义相似性通过向量接近度反映。词嵌入(Word2Vec、GloVe)捕获语言关系,而transformer模型(BERT、GPT)生成上下文嵌入。在Lance等向量数据库中,嵌入通过相似度度量(余弦、欧几里得)实现语义搜索。应用包括推荐系统、语义搜索和相似性匹配。"
+  },
+  "usage_scenarios": [
+    "Building semantic search engines with sentence embeddings from BERT/GPT",
+    "Creating recommendation systems based on user and item embeddings",
+    "Implementing image similarity search using CNN-generated embeddings",
+    "Storing document embeddings in vector databases (Pinecone, Lance) for RAG applications",
+    "Clustering and categorizing data using embedding representations"
+  ],
+  "memory_tips": {
+    "etymology": "embedding = embed(嵌入) + ing, 将数据嵌入到向量空间中",
+    "association": "Think of embeddings as GPS coordinates - they place words/concepts on a map where similar items are nearby. 'King' and 'Queen' are close together.",
+    "related_words": ["vector", "representation learning", "semantic similarity", "word2vec", "transformer"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "We use BERT to generate sentence _______ for semantic search in our documentation.",
+      "answer": "embeddings",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释embedding如何实现语义搜索",
+      "sample_answer": "Embeddings enable semantic search by converting text into vectors where semantically similar content has similar vector representations. We can then find relevant documents by computing vector similarity (like cosine distance) instead of exact keyword matching.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Explain the difference between word embeddings and contextual embeddings",
+      "sample_answer": "Word embeddings (Word2Vec, GloVe) assign each word a fixed vector regardless of context. Contextual embeddings (BERT, GPT) generate different vectors for the same word based on surrounding context, capturing nuanced meanings like 'bank' (river) vs 'bank' (financial).",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ɪmˈbedɪŋ/",
+    "syllables": "em-BED-ding"
+  },
+  "example_sentences": [
+    "Our RAG system stores document embeddings in Lance for efficient similarity search.",
+    "Word2Vec embeddings capture semantic relationships like 'king - man + woman = queen'.",
+    "BERT generates contextual embeddings that vary based on the surrounding sentence context."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

@@ -1,0 +1,72 @@
+{
+  "word": "sharding",
+  "definition": "Horizontally partitioning data across multiple database instances to improve scalability",
+  "domain": "Distributed Systems",
+  "difficulty": "advanced",
+  "project_contexts": [
+    {
+      "context": "Distributed Systems: replication, sharding | database sharding strategies",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "sharding和replication是分布式数据库的两种关键策略,sharding通过水平分区提高可扩展性,而replication通过复制提高可用性"
+    },
+    {
+      "context": "consensus, sharding, replication in distributed data systems",
+      "source": "CLAUDE.md",
+      "explanation": "在分布式数据系统中,sharding、replication和consensus共同工作以实现可扩展性、高可用性和一致性"
+    },
+    {
+      "context": "implementing sharding for large-scale data partitioning in distributed processing",
+      "source": "sparkStudy/reading/executor.md",
+      "explanation": "在Spark等大规模数据处理系统中,通过sharding将数据分布到不同节点,实现并行处理和负载均衡"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Sharding is a database architecture pattern that horizontally partitions data across multiple independent database instances (shards). Each shard contains a subset of the total data, typically determined by a shard key (e.g., user ID ranges, hash values). Sharding enables horizontal scalability by distributing load across multiple servers, but introduces complexity in query routing, cross-shard joins, and maintaining data consistency.",
+    "chinese": "分片是一种数据库架构模式,将数据水平分区到多个独立的数据库实例(分片)中。每个分片包含总数据的一个子集,通常由分片键(如用户ID范围、哈希值)决定。分片通过在多个服务器之间分配负载来实现水平可扩展性,但在查询路由、跨分片连接和维护数据一致性方面引入了复杂性。"
+  },
+  "usage_scenarios": [
+    "Scaling MongoDB or PostgreSQL databases beyond single-server capacity",
+    "Distributing user data across shards by user ID for social media platforms",
+    "Implementing consistent hashing for dynamic shard allocation in NoSQL databases",
+    "Partitioning time-series data by date ranges in analytics systems",
+    "Building multi-tenant SaaS applications with tenant-based sharding"
+  ],
+  "memory_tips": {
+    "etymology": "sharding = shard(碎片) + ing, 将数据库打碎成多个碎片分布存储",
+    "association": "Think of breaking a large pizza into slices (shards) and giving each slice to a different person (server) - easier to handle than one giant pizza.",
+    "related_words": ["partitioning", "horizontal scaling", "consistent hashing", "replication", "distributed database"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "We use _______ to horizontally partition our user database across 10 servers based on user ID.",
+      "answer": "sharding",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释分片和副本的区别",
+      "sample_answer": "Sharding splits data horizontally across multiple servers so each server holds different data, improving scalability. Replication copies the same data to multiple servers for redundancy and availability. They often work together in distributed systems.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Describe challenges in implementing database sharding",
+      "sample_answer": "Challenges include choosing an appropriate shard key to balance load, handling cross-shard queries and joins efficiently, managing shard rebalancing when adding new shards, and maintaining consistency across distributed transactions.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈʃɑːdɪŋ/",
+    "syllables": "SHARD-ing"
+  },
+  "example_sentences": [
+    "Our MongoDB cluster uses sharding to distribute 100TB of user data across 50 shards.",
+    "Choosing the right shard key is critical - poor choices lead to unbalanced load distribution.",
+    "Sharding enables horizontal scalability but complicates cross-shard aggregation queries."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

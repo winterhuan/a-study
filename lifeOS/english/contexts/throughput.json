@@ -1,0 +1,72 @@
+{
+  "word": "throughput",
+  "definition": "The amount of data or operations processed successfully in a given time period",
+  "domain": "Stream Processing",
+  "difficulty": "intermediate",
+  "project_contexts": [
+    {
+      "context": "Stream Processing: watermark, windowing, backpressure, throughput",
+      "source": "CLAUDE.md",
+      "explanation": "throughput是衡量流处理系统性能的核心指标,与watermark、windowing和backpressure一起构成流处理的关键概念"
+    },
+    {
+      "context": "Increase parallelism to 10 for better throughput on this 10-core machine",
+      "source": "lifeOS/english/daily/daily-learning-2025-09-29.md",
+      "explanation": "在Flink/Spark等流处理系统中,通过增加并行度来提高吞吐量是常见的性能优化策略"
+    },
+    {
+      "context": "Use asynchronous I/O to improve throughput when calling external services",
+      "source": "lifeOS/english/daily/daily-learning-2025-09-29.md",
+      "explanation": "使用异步I/O可以在调用外部服务时显著提升系统吞吐量,避免阻塞等待"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Throughput measures the rate at which a system processes data or completes operations, typically expressed as records/second, bytes/second, or transactions/second. In stream processing systems like Flink and Spark, throughput is a critical performance metric that depends on parallelism, resource allocation, and backpressure handling. High throughput indicates efficient resource utilization and system capacity.",
+    "chinese": "吞吐量衡量系统处理数据或完成操作的速率,通常以记录数/秒、字节数/秒或事务数/秒表示。在Flink和Spark等流处理系统中,吞吐量是关键性能指标,取决于并行度、资源分配和反压处理。高吞吐量表明资源利用效率高和系统容量充足。"
+  },
+  "usage_scenarios": [
+    "Measuring stream processing performance in Flink/Spark applications",
+    "Optimizing parallelism settings to maximize data processing throughput",
+    "Monitoring system capacity and identifying bottlenecks",
+    "Balancing throughput vs latency trade-offs in real-time systems",
+    "Benchmarking distributed systems under different workload conditions"
+  ],
+  "memory_tips": {
+    "etymology": "throughput = through(通过) + put(放置), 表示数据通过系统的速率",
+    "association": "Think of a highway - throughput is how many cars pass through per hour. More lanes (parallelism) = higher throughput.",
+    "related_words": ["latency", "bandwidth", "parallelism", "backpressure", "performance"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "We increased the _______ from 10,000 to 50,000 records per second by adding more parallel tasks.",
+      "answer": "throughput",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释吞吐量和延迟的权衡关系",
+      "sample_answer": "Throughput and latency often have a trade-off: optimizing for high throughput (batching operations) may increase latency, while minimizing latency (processing immediately) may reduce overall throughput.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Describe how to improve throughput in a Flink streaming job",
+      "sample_answer": "To improve throughput in Flink, increase operator parallelism to match available cores, enable operator chaining to reduce serialization overhead, and tune checkpoint intervals to balance fault tolerance with performance.",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈθruːpʊt/",
+    "syllables": "THROUGH-put"
+  },
+  "example_sentences": [
+    "Our Flink job processes data with a throughput of 100,000 events per second.",
+    "Increasing parallelism from 4 to 16 doubled the system's throughput.",
+    "Monitor throughput metrics to detect performance degradation in real-time pipelines."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}

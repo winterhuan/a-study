@@ -1,0 +1,72 @@
+{
+  "word": "middleware",
+  "definition": "Software layer that sits between application and underlying services, providing common functionalities",
+  "domain": "Architecture",
+  "difficulty": "intermediate",
+  "project_contexts": [
+    {
+      "context": "Architecture: orchestration, resilience, scalability, middleware",
+      "source": "CLAUDE.md",
+      "explanation": "middleware是架构设计的重要组件,作为中间层提供通用服务,与编排、弹性和可扩展性一起构建健壮的系统架构"
+    },
+    {
+      "context": "message middleware like Kafka | request-response middleware chain",
+      "source": "lifeOS/english/vocabulary/tech-terms.json",
+      "explanation": "Kafka作为消息中间件,在应用程序之间提供异步通信;请求-响应中间件链则用于处理HTTP请求的预处理和后处理"
+    },
+    {
+      "context": "using middleware for cross-cutting concerns in distributed systems",
+      "source": "sparkStudy/reading/executor.md",
+      "explanation": "在分布式系统中,中间件处理横切关注点如日志、监控、认证等,解耦业务逻辑和基础设施代码"
+    }
+  ],
+  "technical_explanation": {
+    "english": "Middleware is software that provides common services and capabilities to applications beyond what's offered by the operating system. It sits between applications and infrastructure, handling concerns like messaging (Kafka), caching (Redis), authentication, logging, and data transformation. Middleware enables loose coupling, reusability, and separation of concerns in distributed architectures.",
+    "chinese": "中间件是为应用程序提供超出操作系统功能的通用服务和能力的软件。它位于应用程序和基础设施之间,处理消息传递(Kafka)、缓存(Redis)、认证、日志和数据转换等关注点。中间件在分布式架构中实现松耦合、可重用性和关注点分离。"
+  },
+  "usage_scenarios": [
+    "Using Kafka as message middleware for asynchronous inter-service communication",
+    "Implementing authentication middleware in web application request chains",
+    "Deploying Redis as caching middleware to improve application performance",
+    "Building logging and monitoring middleware for observability",
+    "Creating API gateway middleware for request routing and transformation"
+  ],
+  "memory_tips": {
+    "etymology": "middleware = middle(中间) + ware(软件), 位于中间层的软件组件",
+    "association": "Think of middleware as a waiter in a restaurant - it sits between customers (apps) and the kitchen (infrastructure), handling requests and responses.",
+    "related_words": ["message broker", "service layer", "API gateway", "proxy", "adapter"]
+  },
+  "practice_exercises": [
+    {
+      "type": "fill_in_blank",
+      "question": "Kafka acts as _______ for decoupling producers and consumers in distributed systems.",
+      "answer": "middleware",
+      "difficulty": "easy"
+    },
+    {
+      "type": "translation",
+      "question": "请用英语解释中间件在微服务架构中的作用",
+      "sample_answer": "Middleware in microservices architecture provides common functionality like service discovery, load balancing, authentication, and message routing, allowing individual services to focus on business logic without reimplementing these cross-cutting concerns.",
+      "difficulty": "medium"
+    },
+    {
+      "type": "usage",
+      "question": "Give examples of different types of middleware",
+      "sample_answer": "Examples include message middleware (Kafka, RabbitMQ), database middleware (connection pools, ORMs), web middleware (authentication, logging), and integration middleware (API gateways, ESBs).",
+      "difficulty": "hard"
+    }
+  ],
+  "pronunciation": {
+    "ipa": "/ˈmɪdlweə(r)/",
+    "syllables": "MID-dle-ware"
+  },
+  "example_sentences": [
+    "We use Kafka as messaging middleware to enable asynchronous communication between services.",
+    "The authentication middleware validates JWT tokens before requests reach application endpoints.",
+    "Middleware components like Redis and Kafka are essential for building scalable microservices."
+  ],
+  "added_date": "2025-09-30",
+  "last_studied": "2025-09-30",
+  "mastery_level": "recognition",
+  "next_review_date": "2025-10-01"
+}
