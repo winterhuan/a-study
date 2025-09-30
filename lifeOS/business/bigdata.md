@@ -17,6 +17,13 @@ Apache Flink 是一个在有界数据流和无界数据流上进行有状态计�
 - https://flink.apache.org/
 - https://nightlies.apache.org/flink/flink-docs-release-2.1/zh/
 
+### Fluss
+
+Apache Fluss（孵化中）是一款为实时分析打造的流存储，可作为湖仓架构的实时数据层。凭借其列式流和实时更新能力，Fluss 与 Apache Flink 实现无缝集成，能够构建出高吞吐量、低延迟且经济高效的流数据仓库，专门适用于实时应用场景。
+
+- https://github.com/apache/fluss
+- https://fluss.apache.org/
+
 ## 分析型数据库
 
 ### Doris
