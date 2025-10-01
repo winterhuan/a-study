@@ -20,7 +20,7 @@
 
 ## 用户自己的Newsletter
 
-在 [myNewsLetter](https://github.com/lifeOS/newsletter/tree/main/myNewsLetter) 中记录。
+在 [myNewsLetter](https://github.com/winterhuan/a-study/tree/main/lifeOS/newsletter/sources/myNewsLetter) 中记录。
 
 ---
 
