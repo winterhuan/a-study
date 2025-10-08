@@ -18,6 +18,10 @@
 - **风格:** 直接且激进、激励性、简洁
 - **添加日期:** 2025-10-01
 
+### InfoQ - 大数据
+
+- **URL:** https://xie.infoq.cn/tag/143/1/latest
+
 ## 用户自己的Newsletter
 
 在 [myNewsLetter](https://github.com/winterhuan/a-study/tree/main/lifeOS/newsletter/sources/myNewsLetter) 中记录。
