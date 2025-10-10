@@ -11,11 +11,13 @@ KubernetesExecutorBackend main -> run 的关键代码如下:
 ```scala
 val env = SparkEnv.createExecutorEnv(driverConf, execId, arguments.bindAddress,
   arguments.hostname, arguments.cores, cfg.ioEncryptionKey, isLocal = false)
+// backendCreateFn 是 new CoarseGrainedExecutorBackend
 val backend = backendCreateFn(env.rpcEnv, arguments, env, cfg.resourceProfile, execId)
 env.rpcEnv.setupEndpoint("Executor", backend)
 // 确保 Kubernetes 上运行的 Executor 进程保持运行状态，直到收到终止信号。这很重要，因为 Executor 需要持续运行以处理来自 Driver 的任务请求
 env.rpcEnv.awaitTermination()
 ```
+
 ## CoarseGrainedExecutorBackend
 
 CoarseGrainedExecutorBackend 是 Spark 中一个通用的 Executor 后端实现，主要用于在集群环境中运行任务。它是 Spark 执行任务的核心组件之一。
@@ -27,7 +29,7 @@ CoarseGrainedExecutorBackend 是 Spark 中一个通用的 Executor 后端实现�
 - 向 Driver 报告任务状态更新
 - 管理 Executor 的生命周期
 
-继承了 IsolatedThreadSafeRpcEndpoint，当 setupEndpoint 之后，CoarseGrainedExecutorBackend
+继承了 IsolatedThreadSafeRpcEndpoint，当 setupEndpoint 之后，CoarseGrainedExecutorBackend 可以接收来自 Driver 的消息进行业务逻辑处理。
 
 CoarseGrainedExecutorBackend 的完整生命周期如下：
 

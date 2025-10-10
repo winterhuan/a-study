@@ -22,6 +22,20 @@
 
 - **URL:** https://xie.infoq.cn/tag/143/1/latest
 
+## GeekPlux Letters
+
+- **URL:** https://letters.geekplux.com/
+
+## medium
+
+- **URL:** https://medium.com/@darshilp
+- **URL:** https://medium.com/@mohitarvindjoshi
+- **URL:** https://medium.com/@andrew-jones
+
+## Data Engineer Things
+
+- **URL:** https://blog.dataengineerthings.org/
+
 ## 用户自己的Newsletter
 
 在 [myNewsLetter](https://github.com/winterhuan/a-study/tree/main/lifeOS/newsletter/sources/myNewsLetter) 中记录。

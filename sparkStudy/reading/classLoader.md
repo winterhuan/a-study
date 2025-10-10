@@ -49,6 +49,7 @@ public class MutableURLClassLoader extends URLClassLoader {
 ### ChildFirstURLClassLoader
 
 ChildFirstURLClassLoader 是一种特殊的类加载器，它打破了标准的双亲委派模型，优先从子类加载器（即当前类加载器）加载类，只有当无法加载时才委托给父类加载器。这种设计在以下场景中非常有用：
+
 - 当需要覆盖父类加载器中的类时
 - 在 REPL 环境中，用户定义的类需要优先于系统类加载
 
