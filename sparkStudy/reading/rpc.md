@@ -2,23 +2,20 @@
 
 ## RPC
 
+RPC 用于控制/协调消息（任务调度、心跳、元数据查询等），面向请求-响应或通知语义的控制消息。
+
+位于 org.apache.spark.rpc，提供 RpcEnv、RpcEndpoint、RpcEndpointRef、RpcCallContext 等抽象，支持 send/ask 等调用。
+
+RPC 通过 RpcEnv/Outbox/Inbox/Dispatcher 抽象消息封装、（de）序列化与 endpoint 路由。
+
 ## BlockTransfer
 
-简短对比：NettyBlockTransferService（块传输） vs Spark RPC（RpcEnv / NettyRpcEnv）
+BlockTransfer 专门用于传输数据块（shuffle、缓存块、广播块、上传/下载），面向大数据流和高吞吐量的块级 I/O。
 
-目的与语义
-
-BlockTransfer：专门用于传输数据块（shuffle、缓存块、广播块、上传/下载），面向大数据流和高吞吐量的块级 I/O。
-RPC：用于控制/协调消息（任务调度、心跳、元数据查询等），面向请求-响应或通知语义的控制消息。
-所在层次与 API
-
-BlockTransfer：位于 org.apache.spark.network.netty / network 包，提供 fetchBlocks、uploadBlock、stream 上传/下载等高层数据接口（BlockTransferService）。
-RPC：位于 org.apache.spark.rpc，提供 RpcEnv、RpcEndpoint、RpcEndpointRef、RpcCallContext 等抽象，支持 send/ask 等调用。
-底层实现
+位于 org.apache.spark.network.netty.network 包，提供 fetchBlocks、uploadBlock、stream 上传/下载等高层数据接口（BlockTransferService）。
 
 两者都基于 Transport/Netty 层，但构建在不同抽象之上：
 BlockTransfer 直接使用 TransportClient/TransportServer、ManagedBuffer、streaming API（支持 file region / zero-copy）。
-RPC 通过 RpcEnv/Outbox/Inbox/Dispatcher 抽象消息封装、（de）序列化与 endpoint 路由。
 数据与序列化
 
 BlockTransfer：以 ManagedBuffer / ByteBuffer / 文件片段为单位，支持流式传输以避免将整个块载入内存；元数据可用二进制协议或 JavaSerializer。
