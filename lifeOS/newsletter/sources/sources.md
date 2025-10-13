@@ -4,6 +4,14 @@
 
 ## 竞品Newsletter
 
+### jack.vanlightly
+
+- **URL:** https://jack-vanlightly.com/
+
+### Humans of the Data Sphere
+
+- **URL:** https://www.hotds.dev/
+
 ### Simon Späti - Data Engineering Blog
 
 - **URL:** https://www.ssp.sh/
