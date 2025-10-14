@@ -1,4 +1,3 @@
-
 # StreamExecutionEnvironment
 
 ## StreamExecutionEnvironment 分析
@@ -220,6 +219,14 @@ public JobClient executeAsync(String jobName) throws Exception {
 ```java
 public StreamGraph getStreamGraph() {
     return getStreamGraph(true);
+}
+
+public StreamGraph getStreamGraph(boolean clearTransformations) {
+    final StreamGraph streamGraph = getStreamGraph(transformations);
+    if (clearTransformations) {
+        transformations.clear();
+    }
+    return streamGraph;
 }
 
 private StreamGraph getStreamGraph(List<Transformation<?>> transformations) {
