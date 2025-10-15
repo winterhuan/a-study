@@ -23,7 +23,7 @@ Apache Flink 源码包含 **38+ 个核心模块**,按功能可分为以下几大
 
 ### 🔧 核心基础层
 
-```
+```text
 flink-core              # 核心 API 和类型系统
 flink-core-api          # 核心 API 定义
 flink-annotations       # 注解定义
@@ -32,7 +32,7 @@ flink-runtime           # 运行时核心 ⭐⭐⭐ (最重要!)
 
 ### 🌊 流处理层
 
-```
+```text
 flink-streaming-java    # 流处理 Java API ⭐⭐⭐
 flink-datastream        # DataStream API
 flink-datastream-api    # DataStream API 定义
@@ -40,7 +40,7 @@ flink-datastream-api    # DataStream API 定义
 
 ### 📊 表处理层
 
-```
+```text
 flink-table/
 ├── flink-table-api-java
 ├── flink-table-planner       # SQL 执行计划生成
@@ -51,7 +51,7 @@ flink-table/
 
 ### 🚀 部署和资源管理
 
-```
+```text
 flink-clients           # 客户端接口
 flink-yarn              # YARN 集成
 flink-kubernetes        # K8s 集成
@@ -60,7 +60,7 @@ flink-container         # 容器支持
 
 ### 🧪 测试模块 (本指南重点!)
 
-```
+```text
 flink-architecture-tests      # 架构约束测试
 flink-tests                   # 集成测试和端到端测试
 flink-test-utils-parent       # 测试工具和辅助类
@@ -72,7 +72,7 @@ flink-tests-java17            # Java 17 兼容性测试
 
 ### 🔌 扩展和工具
 
-```
+```text
 flink-connectors        # 连接器(大部分已外部化)
 flink-formats           # 数据格式支持(Avro, Parquet, ORC 等)
 flink-filesystems       # 文件系统支持(S3, HDFS, Azure 等)
@@ -89,7 +89,7 @@ flink-state-backends    # 状态后端实现
 
 这条路线从用户 API 开始,逐层深入到底层实现:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │ 第1层: 用户 API 层                                        │
 │ • StreamExecutionEnvironment                            │
@@ -132,7 +132,7 @@ flink-state-backends    # 状态后端实现
 
 这条路线从底层基础设施开始,逐步构建完整认知:
 
-```
+```text
 第1阶段: 基础设施层
 ├── 类型系统 (TypeInformation, TypeSerializer)
 ├── 序列化框架 (Kryo, Avro 集成)
@@ -180,7 +180,7 @@ Flink 的测试代码非常完善,包含以下几类:
 
 **位置**:
 
-```
+```text
 flink-streaming-java/src/test/java/org/apache/flink/streaming/api/environment/
 ```
 
@@ -226,7 +226,7 @@ Flink 提供了强大的 **Test Harness** 框架,用于隔离测试各个组件�
 
 **位置**:
 
-```
+```text
 flink-streaming-java/src/test/java/org/apache/flink/streaming/util/
 ```
 
@@ -263,7 +263,7 @@ assertThat(output.get(0).getValue()).isEqualTo("expected");
 
 **位置**:
 
-```
+```text
 flink-streaming-java/src/test/java/org/apache/flink/streaming/runtime/tasks/
 ```
 
@@ -323,13 +323,13 @@ StreamTaskMailboxTestHarness<String> harness =
 
 **位置**:
 
-```
+```text
 flink-runtime/src/test/java/org/apache/flink/runtime/checkpoint/
 ```
 
 **关键测试类**:
 
-```
+```text
 CheckpointCoordinatorTest.java              # 核心协调器测试
 CheckpointCoordinatorTriggeringTest.java    # 触发机制
 CheckpointCoordinatorRestoringTest.java     # 恢复机制
@@ -364,7 +364,7 @@ testCheckpointFailureRecovery()
 
 **关键测试类**:
 
-```
+```text
 flink-streaming-java/src/test/java/org/apache/flink/streaming/api/state/
 flink-runtime/src/test/java/org/apache/flink/runtime/state/
 ```
@@ -389,7 +389,7 @@ flink-runtime/src/test/java/org/apache/flink/runtime/state/
 
 **测试位置**:
 
-```
+```text
 flink-streaming-java/src/test/java/org/apache/flink/streaming/api/windowing/
 ```
 
@@ -402,15 +402,15 @@ flink-streaming-java/src/test/java/org/apache/flink/streaming/api/windowing/
 
 **源码位置**:
 
-```
+```text
 flink-streaming-java/src/main/java/org/apache/flink/streaming/api/windowing/
-```
+```text
 
 #### 模块 2: 网络和背压
 
 **测试位置**:
 
-```
+```text
 flink-runtime/src/test/java/org/apache/flink/runtime/io/network/
 ```
 
@@ -425,7 +425,7 @@ flink-runtime/src/test/java/org/apache/flink/runtime/io/network/
 
 **测试位置**:
 
-```
+```text
 flink-runtime/src/test/java/org/apache/flink/runtime/scheduler/
 ```
 
@@ -497,7 +497,7 @@ cd /home/maiscrm/workspace/study/flink
 
 #### 导入 IDE
 
-```
+```text
 推荐: IntelliJ IDEA
 插件: Scala, Maven
 
@@ -514,7 +514,7 @@ cd /home/maiscrm/workspace/study/flink
 
 **方法 1: 运行单个测试方法**
 
-```
+```text
 1. 打开测试类(如 StreamExecutionEnvironmentTest)
 2. 在测试方法旁边点击绿色三角
 3. 选择 "Debug 'testMethodName'"
@@ -522,7 +522,7 @@ cd /home/maiscrm/workspace/study/flink
 
 **方法 2: 运行整个测试类**
 
-```
+```text
 1. 右键测试类文件
 2. 选择 "Debug 'TestClassName'"
 ```
@@ -568,7 +568,7 @@ CheckpointCoordinator.receiveAcknowledgeMessage() // 接收确认
 
 **在 StreamTask 中**:
 
-```
+```markdown
 - operatorChain: 算子链
 - mailboxProcessor: 邮箱处理器
 - asyncOperationsThreadPool: 异步操作线程池
@@ -577,7 +577,7 @@ CheckpointCoordinator.receiveAcknowledgeMessage() // 接收确认
 
 **在 CheckpointCoordinator 中**:
 
-```
+```markdown
 - pendingCheckpoints: 待完成的检查点
 - completedCheckpoints: 已完成的检查点
 - checkpointProperties: 检查点属性
@@ -585,7 +585,7 @@ CheckpointCoordinator.receiveAcknowledgeMessage() // 接收确认
 
 **在 StateBackend 中**:
 
-```
+```markdown
 - keyedStateBackend: 键控状态后端
 - operatorStateBackend: 算子状态后端
 - snapshots: 状态快照
@@ -611,7 +611,7 @@ find . -name "*ITCase.java" | grep -i "window"
 
 #### 在 IDE 中搜索
 
-```
+```markdown
 Ctrl + Shift + F (Windows/Linux)
 Command + Shift + F (Mac)
 
@@ -666,7 +666,7 @@ Object result = outputList.poll();
 
 ### 源码内文档
 
-```
+```markdown
 flink/docs/                    # 用户文档源码(Markdown)
 flink/flink-examples/          # 官方示例代码
 flink/flink-walkthroughs/      # 入门教程
@@ -817,7 +817,7 @@ grep -r "window" --include="*Test.java" | grep -i "test"
 
 ## 🗺️ 八、综合学习路线图
 
-```
+```markdown
 ┌───────────────────────────────────────────────────────────────┐
 │                   Flink 源码学习全景图                          │
 └───────────────────────────────────────────────────────────────┘
@@ -981,7 +981,7 @@ grep -r "window" --include="*Test.java" | grep -i "test"
 
 **核心理念**:
 
-```
+```markdown
 测试入手 → 理解用法 → 深入源码 → 掌握原理 → 实践应用
 ```
 

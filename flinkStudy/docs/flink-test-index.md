@@ -19,7 +19,7 @@
 
 ### 按模块分类
 
-```
+```markdown
 flink-streaming-java/src/test/java/
 ├── org/apache/flink/streaming/
 │   ├── api/
@@ -361,7 +361,7 @@ testRestoreFromCheckpoint()
 
 ### 初学者路径 (第 1-4 周)
 
-```
+```markdown
 1. StreamExecutionEnvironmentTest      (理解环境)
    ↓
 2. StreamMapTest                        (理解基础算子)
@@ -375,7 +375,7 @@ testRestoreFromCheckpoint()
 
 ### 进阶路径 (第 5-8 周)
 
-```
+```markdown
 1. StreamGraphGeneratorTest             (理解图生成)
    ↓
 2. StreamingJobGraphGeneratorTest       (理解算子链)
@@ -389,7 +389,7 @@ testRestoreFromCheckpoint()
 
 ### 高级路径 (第 9-12 周)
 
-```
+```markdown
 1. CheckpointCoordinatorTest            (理解 Checkpoint)
    ↓
 2. CheckpointCoordinatorTriggeringTest  (理解触发机制)
@@ -409,28 +409,28 @@ Flink 测试文件遵循以下命名规范:
 
 ### 单元测试
 
-```
+```markdown
 {ClassName}Test.java           # 基本单元测试
 例如: StreamMapTest.java
 ```
 
 ### 集成测试
 
-```
+```markdown
 {ClassName}ITCase.java         # 集成测试用例
 例如: StreamTaskITCase.java
 ```
 
 ### 性能测试
 
-```
+```markdown
 {ClassName}BenchmarkTest.java  # 性能基准测试
 例如: SerializationBenchmarkTest.java
 ```
 
 ### 测试工具
 
-```
+```markdown
 {ClassName}TestHarness.java    # 测试框架
 例如: OneInputStreamOperatorTestHarness.java
 
@@ -471,7 +471,7 @@ find . -name "*ITCase.java" | grep -i "window"
 
 **IntelliJ IDEA**:
 
-```
+```markdown
 Ctrl + Shift + F (Windows/Linux)
 Command + Shift + F (Mac)
 
@@ -482,7 +482,7 @@ Command + Shift + F (Mac)
 
 **查找用法**:
 
-```
+```markdown
 Alt + F7: 查找某个类/方法的使用位置
 Ctrl + Alt + H: 查看调用层次
 Ctrl + H: 查看类型层次
@@ -582,7 +582,7 @@ StreamTaskMailboxTestHarness<OUT> harness =
 
 ### 1. 从简单开始
 
-```
+```markdown
 入门级 ⭐
   → StreamExecutionEnvironmentTest
   → StreamMapTest
@@ -601,7 +601,7 @@ StreamTaskMailboxTestHarness<OUT> harness =
 
 ### 2. 结合源码阅读
 
-```
+```markdown
 1. 先运行测试
 2. 设置断点调试
 3. 跟踪到源码实现
@@ -655,7 +655,7 @@ StreamTaskMailboxTestHarness<OUT> harness =
 
 **IntelliJ IDEA**:
 
-```
+```markdown
 1. 打开测试类
 2. 右键测试方法
 3. 选择 "Run 'testMethodName'"
